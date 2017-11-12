@@ -1,4 +1,4 @@
-function [ controllability ] = lcssControllable(A, B)
+function [ controllability, Q ] = lcssControllable(A, B)
 % Check whether a linear state space control system is controllable or not,
 % where the system is described as
 %   dx(t) = Ax(t) + Bu(t)
@@ -10,6 +10,7 @@ function [ controllability ] = lcssControllable(A, B)
 %
 % Output:
 % - controllability: 1 if controllable; -1 if not controllable.
+% - Q: the matrix Q.
 
 n = size(A,1);
 
