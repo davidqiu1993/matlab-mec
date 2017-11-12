@@ -1,6 +1,6 @@
 function [ stability ] = lcssStable(A)
 % Check whether a linear state space control system is stable or not at the
-% equilibrium point of x=0, where a LSS control system is described as
+% equilibrium point of x=0, where the system is described as
 %   dx(t) = Ax(t) + Bu(t)
 %   y(t) = Cx(t)
 % 
