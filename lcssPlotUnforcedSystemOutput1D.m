@@ -14,7 +14,6 @@ for i_T = 1:size(T,2)
     y(1,i_T) = C * expm(A * T(1,i_T)) * x_0;
 end
 
-figure;
 plot(T, y);
 xlabel('t');
 ylabel('y(t)');
