@@ -52,7 +52,18 @@ else
 end
 
 figure;
-scatter(real(e_val), imag(e_val));
+
+scatter(real(e_val), imag(e_val), 'x', 'r');
+
+xL = xlim;
+xL(1,1) = min(xL(1,1),-1);
+xL(1,2) = max(xL(1,2),1);
+yL = ylim;
+yL(1,1) = min(yL(1,1),-1);
+yL(1,2) = max(yL(1,2),1);
+line([0 0], yL); %x-axis
+line(xL, [0 0]); %y-axis
+
 grid on;
 xlabel('Re[eig(A)]');
 ylabel('Im[eig(A)]');
